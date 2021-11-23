@@ -1,0 +1,46 @@
+<form>
+  <p>Meu Primeiro Componente</p>
+
+  <div>
+    <label>
+      Nome
+    </label>
+    <input type="text" name="nome" [(ngModel)]="nomeComponentePai" />
+
+  </div>
+
+  <div>
+    <label>
+      Sobrenome
+    </label>
+    <input type="text" name="sobrenome" [(ngModel)]="sobrenomeComponentePai" />
+  </div>
+
+  <div>
+    <label>
+      Digite o CEP
+    </label>
+    <input type="text" name="cep" [(ngModel)]="cep" />
+  </div>
+
+<app-mensagem [nome]="nomeComponentePai" [sobrenome]="sobrenomeComponentePai" ></app-mensagem>
+
+<app-buscar-cep [cep]="cep" (cepOut)="receberLogradouroComponenteFilho($event)"></app-buscar-cep>
+{{logradouro}}
+
+<br><br><br>
+<app-renderiza-cep></app-renderiza-cep>
+
+</form>
+
+<!--
+  TODO:
+
+  - Criar um Input CEP nesta tela
+  - criar um novo componente chamado "buscarCep"
+
+  - O componente buscar-cep deve receber um parametro de entrada [cep] : string
+  - O componente buscar-cep deve possuir um botao "buscar" com um metodo que  chame a api ao ser clicado.
+******  - O componente buscar-cep deve acessar um serviço de api (https://viacep.com.br/ws/79070000/json/unicode/)
+******  * O retorno da API deve ser visualizado no componente
+-->
