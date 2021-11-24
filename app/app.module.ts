@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { BuscarCepComponent } from './buscar-cep/buscar-cep.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RenderizaCepComponent } from './renderiza-cep/renderiza-cep.component';
+import { EstoqueComponent } from './estoque/estoque.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RenderizaCepComponent } from './renderiza-cep/renderiza-cep.component';
     MensagemComponent,
     BuscarCepComponent,
     RenderizaCepComponent,
+    EstoqueComponent,
   ],
   imports: [
     BrowserModule,

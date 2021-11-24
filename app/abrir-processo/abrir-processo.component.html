@@ -1,35 +1,6 @@
 <form>
-  <p>Meu Primeiro Componente</p>
 
-  <div>
-    <label>
-      Nome
-    </label>
-    <input type="text" name="nome" [(ngModel)]="nomeComponentePai" />
-
-  </div>
-
-  <div>
-    <label>
-      Sobrenome
-    </label>
-    <input type="text" name="sobrenome" [(ngModel)]="sobrenomeComponentePai" />
-  </div>
-
-  <div>
-    <label>
-      Digite o CEP
-    </label>
-    <input type="text" name="cep" [(ngModel)]="cep" />
-  </div>
-
-<app-mensagem [nome]="nomeComponentePai" [sobrenome]="sobrenomeComponentePai" ></app-mensagem>
-
-<app-buscar-cep [cep]="cep" (cepOut)="receberLogradouroComponenteFilho($event)"></app-buscar-cep>
-{{logradouro}}
-
-<br><br><br>
-<app-renderiza-cep></app-renderiza-cep>
+  <app-estoque></app-estoque>
 
 </form>
 
